@@ -55,8 +55,9 @@ class Fib extends Component {
 
     render(){
         return (
-            <div>
+            <div className="fib__container">
                 <form
+                    className="fib__form"
                     onSubmit={this.handleSubmit}
                 >
                     <label>Enter Your Index:</label>
@@ -67,10 +68,10 @@ class Fib extends Component {
                     <button>Submit</button>
                 </form>
 
-                <h3>Indexes I Have Seen:</h3>
+                <h3 className="fib__heading">Indexes I Have Seen:</h3>
                 {this.renderSeenIndexes()}
 
-                <h3>Calculated Values:</h3>
+                <h3 className="fib__heading">Calculated Values:</h3>
                 {this.renderValues()}
             </div>
         )

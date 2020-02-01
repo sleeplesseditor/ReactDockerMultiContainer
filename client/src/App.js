@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Fib from './Fib';
-import OtherPage from './OtherPage';
+import './App.scss';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Fib from './components/Fib/Fib';
+import OtherPage from './components/OtherPage/OtherPage';
 
 function App() {
   return (
     <Router>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Link to="/">Home</Link>
-        <Link to="/otherpage">Other Page</Link>
-      </header>
-      <div>
+      <Header />
+      <div className="app-container">
         <Route exact path="/" component={Fib} />
         <Route path="/otherpage" component={OtherPage} />
       </div>
-    </div>
     </Router>
   );
 }
