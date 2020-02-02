@@ -31,16 +31,18 @@
         text-align: center;
     }
 
+    &__input {
+        width: 100%;
+        margin: 1rem;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
     &__form {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 1rem 3rem;
-
-        input {
-            width: 100%;
-            margin: 1rem;
-        }
 
         button {
             color: #fff;
