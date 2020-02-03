@@ -1,3 +1,7 @@
 # React Docke Multi-Container
 
-An experiment in a complex multi-container Docker setup with an app using React, Express and Redis, as part of Stephen Grider's [Udemy course](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide).
+An experiment in a complex multi-container Docker setup with an app using React, Express and Redis, as part of Stephen Grider's [Udemy course](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide). Ready for uploading to AWS.
+
+<img width="1440" alt="Screenshot 2020-02-03 at 10 45 32" src="https://user-images.githubusercontent.com/25869284/73646944-63a20500-4672-11ea-9c29-74ee0169b892.png">
+
+Main page with example index value displayed.

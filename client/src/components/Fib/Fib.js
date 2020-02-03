@@ -70,10 +70,10 @@ class Fib extends Component {
                 </form>
 
                 <h3 className="fib__heading">Indexes I Have Seen:</h3>
-                {this.renderSeenIndexes()}
+                <div className="fib__values">{this.renderSeenIndexes()}</div>
 
                 <h3 className="fib__heading">Calculated Values:</h3>
-                {this.renderValues()}
+                <div className="fib__values">{this.renderValues()}</div>
             </div>
         )
     }
