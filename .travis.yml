@@ -1,0 +1,23 @@
+sudo: required
+servivces:
+    - docker
+
+before_install:
+    - docker build -t DOCKERID/NAME -f ./client/Dockerfile.dev ./client
+
+script:
+    - docker run DOCKERID/NAME npm test -- --coverage
+
+after_success:
+    - docker build -t DOCKERID/multi-client ./client
+    - docker build -t DOCKERID/multi-nginx ./nginx
+    - docker build -t DOCKERID/multi-server ./server
+    - docker build -t DOCKERID/multi-worker ./worker
+
+    # Docker CLI login
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    # Push images to Docker Hub
+    - docker push DOCKERID/multi-client
+    - docker push DOCKERID/multi-nginx
+    - docker push DOCKERID/multi-server
+    - docker push DOCKERID/multi-worker
